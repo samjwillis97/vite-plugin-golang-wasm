@@ -9,6 +9,7 @@ export const buildFile: GoBuilder = (viteConfig, config, id): Promise<string> =>
     env: {
       GOPATH: process.env.GOPATH,
       GOROOT: process.env.GOROOT,
+      GOMODCACHE: process.env.GOMODCACHE,
       GOCACHE: join(config.goBuildDir as string, ".gocache"),
       GOOS: "js",
       GOARCH: "wasm"
